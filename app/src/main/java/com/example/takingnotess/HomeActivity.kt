@@ -15,11 +15,11 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.bottomNavigationView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> replaceFragment(Home())
-                R.id.task -> replaceFragment(Task())
-                R.id.settings -> replaceFragment(Setting())
+        binding.bottomAppBar.setOnClickListener { item ->
+            when (item.id) {
+                R.id.btnhome -> replaceFragment(Home())
+                R.id.btntask -> replaceFragment(Task())
+                R.id.btnflashcards -> replaceFragment(Setting())
                 else -> {}
             }
             true
@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frameLayout, fragment)
+        fragmentTransaction.replace(R.id.coordinatorLayout, fragment)
         fragmentTransaction.commit()
     }
 }
