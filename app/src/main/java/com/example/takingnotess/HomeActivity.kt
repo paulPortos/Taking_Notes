@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.bottomAppBar.setOnClickListener { item ->
+        binding.bottomAppBar.setOnClickListener() { item ->
             when (item.id) {
                 R.id.btnhome -> replaceFragment(Home())
                 R.id.btntask -> replaceFragment(Task())
