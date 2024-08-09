@@ -25,6 +25,6 @@ class Home : Fragment() {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-
+    //Hotdog mader fuckerrrr
 
 }
