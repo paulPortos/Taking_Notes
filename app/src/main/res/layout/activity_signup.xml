@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
-        android:id="@+id/etSignIn"
+        android:id="@+id/btnSignIn"
         android:layout_width="127dp"
         android:layout_height="57dp"
         android:backgroundTint="@color/beige"
@@ -51,10 +51,11 @@
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.281" />
+        app:layout_constraintVertical_bias="0.268" />
+
 
     <Button
         android:id="@+id/btnSignUp"
@@ -72,27 +73,122 @@
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.268" />
+
+    <EditText
+        android:id="@+id/etusername"
+        android:layout_width="308dp"
+        android:layout_height="65dp"
+        android:background="@drawable/edittext2"
+        android:drawableLeft="@drawable/ic_username"
+        android:drawablePadding="5dip"
+        android:ems="10"
+        android:hint="Email or username"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#80000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
 
 
+    <FrameLayout
+        android:layout_width="315dp"
+        android:layout_height="209dp"
+        android:background="@drawable/tv_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704">
 
 
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/password" />
 
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="276dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#80000000"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/etconfirmpassword"
+            android:layout_width="276dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="#80000000"
+            android:textSize="15dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/ivTogglePassword"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="70dp"
+            android:contentDescription="Toggle password visibility"
+            android:paddingEnd="8dp"
+            android:src="@drawable/ic_visibility_off" />
+
+        <ImageView
+            android:id="@+id/ivToggleConfirmPassword"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="130dp"
+            android:contentDescription="Toggle password visibility"
+            android:paddingEnd="8dp"
+            android:src="@drawable/ic_visibility_off" />
+
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/btnloginnow"
         android:layout_width="308dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/blue"
+        android:fontFamily="@font/poppins_medium"
         android:text="Sign Up"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins_medium"
         android:textSize="20dp"
-
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintVertical_bias="0.901" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
