@@ -41,9 +41,16 @@ android {
 dependencies {
     val nav_version = "2.7.7"
 
+    
+    implementation("com.google.code.gson:gson:2.10")
+
+    //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.google.code.gson:gson:2.10")
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+    //Coil
+    implementation("io.coil-kt:coil:2.4.0")
 
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
