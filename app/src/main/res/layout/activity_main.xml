@@ -122,17 +122,22 @@
         android:layout_width="313dp"
         android:layout_height="64dp"
         android:hint="@string/username"
+        android:textColorHint="@color/black"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.583"
-        app:startIconDrawable="@drawable/baseline_person_24">
+        app:startIconDrawable="@drawable/baseline_person_24"
+        app:startIconTint="@color/black"
+        app:hintTextColor="@color/black"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/usernameInput"
             android:layout_width="match_parent"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:background="@drawable/round"
             android:backgroundTint="@color/beige" />
@@ -144,22 +149,32 @@
         android:layout_width="313dp"
         android:layout_height="64dp"
         android:hint="@string/password"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:endIconTint="@color/black"
         app:endIconMode="password_toggle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.698"
         app:startIconDrawable="@drawable/baseline_lock_24"
+        app:startIconTint="@color/black"
+        app:hintTextColor="@color/black"
+
+
        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round"
             android:backgroundTint="@color/beige"
             android:inputType="textPassword"
+
+
+
             />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,15 +16,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var btnForgot: Button
     private lateinit var btnLoginNow: Button
-    private lateinit var togglePassword: ImageView
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnSignup = findViewById(R.id.btnSignUp)
-        etUsername = findViewById(R.id.etusername)
-        etPassword = findViewById(R.id.etpassword)
+        etUsername = findViewById(R.id.usernameInput)
+        etPassword = findViewById(R.id.passwordInput)
         btnForgot = findViewById(R.id.btnforgot)
         btnLoginNow = findViewById(R.id.btnloginnow)
 
