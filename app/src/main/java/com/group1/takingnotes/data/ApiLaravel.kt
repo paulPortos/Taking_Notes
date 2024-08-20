@@ -16,7 +16,7 @@ object ApiLaravel {
 
     private var authenticationToken: String? = null;
 
-    fun getAuthenticationToken(token: String) {
+    fun setAuthenticationToken(token: String) {
         authenticationToken = token
     }
 

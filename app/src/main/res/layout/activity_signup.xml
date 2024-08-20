@@ -175,7 +175,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/btnloginnow"
+        android:id="@+id/btnSignUpNow"
         android:layout_width="308dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/blue"

@@ -7,11 +7,13 @@ import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.group1.takingnotes.data.ApiService
 import com.group1.takingnotes.data.ApiLaravel
 import com.group1.takingnotes.data.model.RegistrationRequest
 import com.group1.takingnotes.data.model.RegistrationResponse
+import retrofit2.Call
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnForgot: Button
     private lateinit var btnLoginNow: Button
     private lateinit var togglePassword: ImageView
-    private lateinit var apiService: ApiService
+    //private lateinit var apiService: ApiService
     private var isPasswordVisible = false
     @SuppressLint("MissingInflatedId")
 
@@ -37,14 +39,7 @@ class MainActivity : AppCompatActivity() {
         btnLoginNow = findViewById(R.id.btnloginnow)
         togglePassword = findViewById(R.id.ivTogglePassword)
 
-        apiService = ApiLaravel.createService(ApiService::class.java)
-
-        this.btnLoginNow.setOnClickListener {
-            val username = etUsername.text.toString()
-            val password = etPassword.text.toString()
-
-
-        }
+       // apiService = ApiLaravel.createService(ApiService::class.java)
 
         this.togglePassword.setOnClickListener {
             togglePasswordVisibility(isPasswordVisible)
@@ -57,14 +52,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerUser(name: String, password: String, passwordConfirmation: String){
-        val registerRequest = RegistrationRequest(name, password, passwordConfirmation)
-        val call = apiService.registerUser(registerRequest)
 
-        call.enqueue(object : retrofit2.Callback<RegistrationResponse>
-    }
 
     private fun togglePasswordVisibility(isPasswordVisible: Boolean){
+        etPassword = findViewById(R.id.etpassword)
         this.isPasswordVisible = !isPasswordVisible
             if (isPasswordVisible){
                 // Show Password
