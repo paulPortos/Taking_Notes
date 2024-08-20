@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etpassword)
         btnForgot = findViewById(R.id.btnforgot)
         btnLoginNow = findViewById(R.id.btnloginnow)
-        togglePassword = findViewById(R.id.ivTogglePassword)
+
 
         // LOGIN
         this.btnLoginNow.setOnClickListener {
@@ -45,22 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // SHOW/HIDE PASSWORD
-        var isPasswordVisible = false
-        this.togglePassword.setOnClickListener {
-            isPasswordVisible = !isPasswordVisible
-            if (isPasswordVisible) {
-                // Show Password
-                this.etPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                this.togglePassword.setImageResource(R.drawable.ic_visibility_on) // Update to your "visible" icon
-            } else {
-                // Hide Password
-                this.etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                this.togglePassword.setImageResource(R.drawable.ic_visibility_off) // Update to your "invisible" icon
-            }
-            // Move the cursor to the end of the text
-            this.etPassword.setSelection(etPassword.text.length)
-        }
+
 
         // SIGN UP
         this.btnSignup.setOnClickListener {
