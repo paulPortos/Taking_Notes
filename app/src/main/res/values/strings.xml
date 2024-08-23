@@ -6,4 +6,7 @@
     <string name="username">Username</string>
     <string name="confirm_password">Confirm password</string>
     <string name="password_signup">Password</string>
+    <string name="notes">Notes</string>
+    <string name="flashcards">Flashcards</string>
+
 </resources>

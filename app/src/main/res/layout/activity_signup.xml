@@ -98,7 +98,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="top|center"
-                android:src="@drawable/password"
+                android:src="@drawable/baseline_lock_24"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -112,7 +113,9 @@
                 android:hint="@string/password_signup"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/black"
+                android:textColorHint="@color/grey"
                 app:hintTextColor="@color/black"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
@@ -135,8 +138,9 @@
                 android:layout_height="54dp"
                 android:hint="@string/confirm_password"
                 app:endIconMode="password_toggle"
-                app:hintTextColor="@color/black"
+                android:textColorHint="@color/grey"
                 app:endIconTint="@color/black"
+                app:hintTextColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -194,8 +198,9 @@
                 android:layout_width="267dp"
                 android:layout_height="54dp"
                 android:hint="@string/username"
-                app:hintTextColor="@color/black"
+                android:textColorHint="@color/grey"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.895"
                 app:layout_constraintStart_toStartOf="parent"
@@ -221,7 +226,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.5"
-                app:srcCompat="@drawable/ic_username"
+                app:srcCompat="@drawable/baseline_person_24"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
