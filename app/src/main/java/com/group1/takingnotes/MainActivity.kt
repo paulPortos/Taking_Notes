@@ -16,18 +16,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var btnForgot: Button
     private lateinit var btnLoginNow: Button
-    private lateinit var togglePassword: ImageView
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnSignup = findViewById(R.id.btnSignUp)
-        etUsername = findViewById(R.id.etusername)
-        etPassword = findViewById(R.id.etpassword)
+        etUsername = findViewById(R.id.usernameInput)
+        etPassword = findViewById(R.id.passwordInput)
         btnForgot = findViewById(R.id.btnforgot)
         btnLoginNow = findViewById(R.id.btnloginnow)
-        togglePassword = findViewById(R.id.ivTogglePassword)
+
 
         // LOGIN
         this.btnLoginNow.setOnClickListener {
@@ -45,22 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // SHOW/HIDE PASSWORD
-        var isPasswordVisible = false
-        this.togglePassword.setOnClickListener {
-            isPasswordVisible = !isPasswordVisible
-            if (isPasswordVisible) {
-                // Show Password
-                this.etPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                this.togglePassword.setImageResource(R.drawable.ic_visibility_on) // Update to your "visible" icon
-            } else {
-                // Hide Password
-                this.etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                this.togglePassword.setImageResource(R.drawable.ic_visibility_off) // Update to your "invisible" icon
-            }
-            // Move the cursor to the end of the text
-            this.etPassword.setSelection(etPassword.text.length)
-        }
+
 
         // SIGN UP
         this.btnSignup.setOnClickListener {
